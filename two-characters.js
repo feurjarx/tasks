@@ -70,7 +70,8 @@ function maxLen(n, s){
     pairs.forEach(function (pair) {
         let line = s;
 
-        const removedChars = arrayDiff(mainBase, pair);
+        //const removedChars = arrayDiff(mainBase, pair);
+        const removedChars = mainBase.diff(pair);
         removedChars.forEach(function (ch) {
             line = removeCharGlobalFromLine(ch, line);
         });
